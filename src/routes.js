@@ -1,14 +1,15 @@
 const express = require("express");
 
+const crypto = require("crypto");
+
 const routes = express.Router();
 
 routes.post("/ongs", (request, response) => {
-  const body = request.body;
+  const { name, email, whatsapp, uf } = request.body;
 
-  return response.json({
-    evento: "semana Omnistack11.0",
-    aluno: "Raphael Pavani"
-  });
+  const id = crypto.randomBytes(4).toString("HEX");
+
+  return response.json({});
 });
 
 module.exports = routes;
