@@ -9,6 +9,7 @@ routes.get("/ongs", OngControllers.index);
 
 routes.post("/ongs", OngControllers.create);
 
+routes.get("/incidents", IncidentControllers.index);
 routes.post("/incidents", IncidentControllers.create);
 
 module.exports = routes;
